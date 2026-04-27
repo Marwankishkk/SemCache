@@ -1,4 +1,4 @@
-# semcache
+# SemCache
 
 Semantic response cache for LLM-style workflows: store `(query, response)` pairs keyed by embedding similarity so paraphrases can hit the same cached answer without an exact string match.
 
