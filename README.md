@@ -38,5 +38,27 @@ This saves:
 
 ## Install
 
+From the project root (the directory that contains `pyproject.toml`):
+
 ```bash
 uv sync
+```
+
+---
+
+## How to run
+
+**Smoke example** (downloads the embedding model on first run, then exercises cache hit/miss):
+
+```bash
+uv run python examples/smoke_test.py
+```
+
+**Tests** (install dev dependencies first):
+
+```bash
+uv sync --extra dev
+uv run pytest
+```
+
+Use `semcache` as a library in your own Python code after `uv sync`; import `Cache`, `EmbeddingModel`, and `Storage` from `semcache` (see `examples/smoke_test.py`).
